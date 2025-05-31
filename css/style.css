@@ -17,8 +17,12 @@ body {
     color: #18181b;
 }
 
-.body-div {
+.site {
     padding-inline: 1rem;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid=template-columns: minmax(0, 1fr);
 }
 
 a {
@@ -66,7 +70,6 @@ img {
 main {
     display: flex;
     flex-direction: column;
-    min-height: 100dvh;
     gap: 2rem;
 }
 

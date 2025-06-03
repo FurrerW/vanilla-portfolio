@@ -4,6 +4,12 @@
 
 /* Global Styling */
 :root {
+    --bg-color: #e5e5e5, #171717;
+    --text-color: #171717, #e5e5e5;
+    --accent-color: #6366f1;
+
+    color-scheme: light dark;
+
     * {
         box-sizing: border-box;
         margin: 0;
@@ -14,8 +20,8 @@
 
 body {
     font-family: "Quicksand", sans-serif;
-    background-color: #171717;
-    color: #e5e5e5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .site {
@@ -89,7 +95,7 @@ p {
 .logo {
     font-size: 2rem;
     font-weight: 600;
-    outline: 2px solid #6366f1;
+    outline: 2px solid var(--accent-color);
     padding: 0.5rem;
 }
 
@@ -126,7 +132,7 @@ main {
     gap: 4rem;
 
     .name {
-        background: linear-gradient(45deg, #f43f5e, #6366f1);
+        background: linear-gradient(45deg, var(--accent-color), #f43f5e);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -142,7 +148,7 @@ main {
         .hero_text {
             font-size: 1.25rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #6366f1, #f43f5e);
+            background: linear-gradient(45deg, #f43f5e, var(--accent-color));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -165,7 +171,7 @@ main {
         margin: 0 auto;
         font-family: inherit;
         color: inherit;
-        border: 2px solid #6366f1;
+        border: 2px solid var(--accent-color);
         padding: 1rem;
         background: none;
     }
@@ -223,7 +229,6 @@ footer {
 }
 
 /* Media Queries */
-
 @media screen and (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;

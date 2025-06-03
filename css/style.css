@@ -2,6 +2,7 @@
 @import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
+/* Global Styling */
 :root {
     * {
         box-sizing: border-box;
@@ -42,6 +43,49 @@ img {
     height: auto;
 }
 
+h1 {
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+h2 {
+    font-size: 2.25rem;
+    line-height: calc(2.5 / 2);
+    letter-spacing: -0.025em;
+}
+
+h3 {
+    font-size: 1.875rem;
+    line-height: cacl(2.25 / 1);
+    letter-spacing: -0.025em;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: calc(2 / 1.5);
+    letter-spacing: -0.025em;
+}
+
+h5 {
+    font-size: 1.25rem;
+    line-height: calc(1.75 / 1);
+    letter-spacing: 0em;
+}
+
+h6 {
+    font-size: 1.125rem;
+    line-height: calc(1.75 / 1);
+    letter-spacing: 0em;
+}
+
+p {
+    font-size: 1rem;
+    line-height: calc(1.5 / 1);
+    letter-spacing: 0em;
+}
+
+/* Header Styling */
 .logo {
     font-size: 2rem;
     font-weight: 600;
@@ -56,21 +100,19 @@ img {
 .topnav {
     align-items: center;
     display: flex;
-    font-size: 1rem;
     justify-content: space-between;
     padding-top: 1rem;
 }
 
-.topnav_links,
-.bottomnav_socials {
+.topnav_links {
     display: flex;
     flex-direction: row;
     list-style: none;
     gap: 1rem;
-    font-size: 1rem;
     font-weight: bold;
 }
 
+/* Main Styling */
 main {
     display: flex;
     flex-direction: column;
@@ -83,13 +125,21 @@ main {
     flex-direction: column;
     gap: 4rem;
 
+    .name {
+        background: linear-gradient(45deg, #f43f5e, #6366f1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
     .hero-description {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         justify-content: space-evenly;
 
-        > .hero_text {
+        .hero_text {
             font-size: 1.25rem;
             font-weight: bold;
             background: linear-gradient(45deg, #6366f1, #f43f5e);
@@ -101,20 +151,12 @@ main {
     }
 }
 
-.name {
-    background: linear-gradient(45deg, #f43f5e, #6366f1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-}
-
 .recent-projects {
     display: flex;
     flex-direction: column;
     gap: 4rem;
 
-    > h2 {
+    h2 {
         padding-bottom: 2rem;
     }
 
@@ -126,13 +168,9 @@ main {
         border: 2px solid #6366f1;
         padding: 1rem;
         background: none;
-
-        > a {
-            font-size: 1.05rem;
-        }
     }
 
-    > button:hover {
+    button:hover {
         background-color: #6366f1;
 
         a {
@@ -159,20 +197,32 @@ main {
     justify-content: space-between;
     gap: 0.5rem;
 
-    > a {
+    a {
         font-size: 1.25rem;
         font-weight: 600;
     }
 }
 
+/* Footer Styling */
 footer {
     height: 2rem;
-    > nav {
+    nav {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+
+        .bottomnav_socials {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
     }
 }
+
+/* Media Queries */
 
 @media screen and (prefers-reduced-motion: no-preference) {
     html {
@@ -180,8 +230,8 @@ footer {
     }
 }
 
-@media screen and (min-width: 721) {
-    .site {
-        max-width: 1024px;
-    }
+@media screen and (width < 600px) {
+}
+
+@media screen and (width >= 600px) {
 }

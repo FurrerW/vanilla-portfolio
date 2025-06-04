@@ -15,6 +15,7 @@
     margin: 0;
     min-width: 0;
     padding: 0;
+    text-wrap: pretty;
 }
 
 body {
@@ -131,7 +132,7 @@ main {
     gap: 4rem;
 
     .name {
-        background: linear-gradient(45deg, var(--accent-color), #f43f5e);
+        background: linear-gradient(45deg, #1e1b4b, var(--accent-color), #f43f5e);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -147,10 +148,10 @@ main {
         .hero_text {
             font-size: 1.25rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #f43f5e 10%, var(--accent-color) 45%);
+            /* background: linear-gradient(45deg, #f43f5e, var(--accent-color), #1e1b4b);
             -webkit-background-clip: text;
             background-clip: text;
-            color: transparent;
+            color: transparent; */
             display: inline-block;
         }
     }
@@ -226,6 +227,27 @@ footer {
         }
     }
 }
+
+/* Contact Page Styling */
+
+.contact-page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .contact-intro {
+        font-size: 1.25rem;
+    }
+
+    .contact-page-socials {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        font-size: 1.5rem;
+    }
+}
+
+.
 
 /* Media Queries */
 @media screen and (prefers-reduced-motion: no-preference) {

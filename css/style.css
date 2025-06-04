@@ -5,8 +5,9 @@
 /* Global Styling */
 :root {
     --bg-color: oklch(0.92 0 0);
-    --text-color: oklch(0.27 0 0);
-    --accent-color: oklch(0.51 0.23 277);
+    --text-color: oklch(0.14 0 0);
+    --indigo-accent-color: oklch(0.51 0.23 277);
+    --rose-accent-color: oklch(0.65 0.22 16);
     --card-border-color: oklch(0.72 0 0);
 }
 
@@ -17,6 +18,7 @@
     padding: 0;
     text-wrap: pretty;
     -webkit-text-wrap: balance;
+    -moz-text-wrap: balance;
 }
 
 body {
@@ -41,7 +43,7 @@ a {
 }
 
 a:hover {
-    color: var(--accent-color);
+    color: var(--indigo-accent-color);
 }
 
 img {
@@ -96,7 +98,7 @@ p {
 .logo {
     font-size: 2rem;
     font-weight: 600;
-    outline: 2px solid var(--accent-color);
+    outline: 2px solid var(--indigo-accent-color);
     padding: 0.5rem;
 }
 
@@ -133,7 +135,7 @@ main {
     gap: 4rem;
 
     .name {
-        background: linear-gradient(45deg, #1e1b4b, var(--accent-color), #f43f5e);
+        background: linear-gradient(45deg, #1e1b4b, var(--indigo-accent-color), var(--rose-accent-color));
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -149,10 +151,6 @@ main {
         .hero_text {
             font-size: 1.25rem;
             font-weight: bold;
-            /* background: linear-gradient(45deg, #f43f5e, var(--accent-color), #1e1b4b);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent; */
             display: inline-block;
         }
     }
@@ -169,7 +167,7 @@ main {
 
     .view-more-projects {
         align-items: center;
-        background-color: var(--accent-color);
+        background-color: var(--indigo-accent-color);
         border: none;
         color: oklch(0.92 0 0);
         cursor: pointer;
@@ -235,18 +233,38 @@ footer {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(1fr, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 4rem;
 
     .project-container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
         gap: 0.5rem;
+        justify-content: space-between;
+
+        a {
+            font-weight: 600;
+        }
+
+        .project-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--indigo-accent-color), var(--rose-accent-color) 50%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
 
         .technologies-used {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             list-style: none;
+            border-bottom: 1px solid var(--border-color);
+
+            li {
+                font-size: 0.85rem;
+            }
         }
     }
 }
@@ -278,9 +296,10 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #171717;
-        --text-color: #e5e5e5;
-        --accent-color: #6366f1;
-        --card-border-color: #525252;
+        --bg-color: oklch(0.2 0 0);
+        --text-color: oklch(0.92 0 0);
+        --indigo-accent-color: oklch(0.51 0.23 277);
+        --rose-accent-color: oklch(0.65 0.22 16);
+        --card-border-color: oklch(0.44 0 0);
     }
 }

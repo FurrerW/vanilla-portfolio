@@ -4,18 +4,17 @@
 
 /* Global Styling */
 :root {
-    --bg-color: #e5e5e5, #171717;
-    --text-color: #171717, #e5e5e5;
+    --bg-color: #e5e5e5;
+    --text-color: #171717;
     --accent-color: #6366f1;
+    --card-border-color: #a3a3a3;
+}
 
-    color-scheme: light dark;
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        min-width: 0;
-        padding: 0;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
 }
 
 body {
@@ -34,13 +33,13 @@ body {
 }
 
 a {
-    color: inherit;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
-    color: #6366f1;
+    color: var(--accent-color);
 }
 
 img {
@@ -166,7 +165,7 @@ main {
         padding-bottom: 2rem;
     }
 
-    > button {
+    button {
         cursor: pointer;
         margin: 0 auto;
         font-family: inherit;
@@ -177,10 +176,10 @@ main {
     }
 
     button:hover {
-        background-color: #6366f1;
+        background-color: var(--accent-color);
 
         a {
-            color: inherit;
+            color: #e5e5e5;
         }
     }
 }
@@ -196,7 +195,7 @@ main {
 }
 
 .project-card {
-    border: 1px solid #ccc;
+    border: 1px solid var(--card-border-color);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -235,8 +234,11 @@ footer {
     }
 }
 
-@media screen and (width < 600px) {
-}
-
-@media screen and (width >= 600px) {
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #171717;
+        --text-color: #e5e5e5;
+        --accent-color: #6366f1;
+        --card-border-color: #525252;
+    }
 }

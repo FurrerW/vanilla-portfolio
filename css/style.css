@@ -4,10 +4,10 @@
 
 /* Global Styling */
 :root {
-    --bg-color: #e5e5e5;
-    --text-color: #171717;
-    --accent-color: #6366f1;
-    --card-border-color: #a3a3a3;
+    --bg-color: oklch(0.92 0 0);
+    --text-color: oklch(0.27 0 0);
+    --accent-color: oklch(0.51 0.23 277);
+    --card-border-color: oklch(0.72 0 0);
 }
 
 * {
@@ -16,6 +16,7 @@
     min-width: 0;
     padding: 0;
     text-wrap: pretty;
+    -webkit-text-wrap: balance;
 }
 
 body {
@@ -166,22 +167,24 @@ main {
         padding-bottom: 2rem;
     }
 
-    button {
+    .view-more-projects {
+        align-items: center;
+        background-color: var(--accent-color);
+        border: none;
+        color: oklch(0.92 0 0);
         cursor: pointer;
+        display: flex;
+        font-size: 1rem;
+        font-weight: bold;
+        justify-content: center;
         margin: 0 auto;
-        font-family: inherit;
-        color: inherit;
-        border: 2px solid var(--accent-color);
-        padding: 1rem;
-        background: none;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        transition: background-color 0.2s ease-in-out;
     }
 
-    button:hover {
-        background-color: var(--accent-color);
-
-        a {
-            color: #e5e5e5;
-        }
+    .view-more-projects:hover {
+        background-color: oklch(0.41 0.23 277);
     }
 }
 

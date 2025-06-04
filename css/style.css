@@ -231,8 +231,27 @@ footer {
     }
 }
 
-/* Contact Page Styling */
+/* Projects Page Styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1fr, minmax(250px, 1fr));
+    gap: 2rem;
 
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .technologies-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style: none;
+        }
+    }
+}
+
+/* Contact Page Styling */
 .contact-page-content {
     display: flex;
     flex-direction: column;
@@ -249,8 +268,6 @@ footer {
         font-size: 1.5rem;
     }
 }
-
-.
 
 /* Media Queries */
 @media screen and (prefers-reduced-motion: no-preference) {

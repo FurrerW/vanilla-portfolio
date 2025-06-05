@@ -101,15 +101,10 @@ p {
 }
 
 /* Header Styling */
-.logo {
-    font-size: 2rem;
-    font-weight: 600;
-    outline: 2px solid var(--indigo-accent-color);
-    padding: 0.5rem;
-}
 
-.logo:hover {
-    color: inherit;
+.logo {
+    height: 4rem;
+    width: auto;
 }
 
 .topnav {
@@ -276,7 +271,6 @@ footer {
 }
 
 /* Case Study Styling */
-
 
 /* About Page Styling */
 

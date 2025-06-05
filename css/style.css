@@ -1,6 +1,12 @@
 @import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css");
 @import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype-variations");
+    font-weight: 300 700;
+    font-display: swap;
+}
 
 /* Global Styling */
 :root {
@@ -248,7 +254,7 @@ footer {
         .project-name {
             font-size: 1.25rem;
             font-weight: bold;
-            background: linear-gradient(45deg, var(--indigo-accent-color), var(--rose-accent-color) 50%);
+            background: linear-gradient(45deg, var(--indigo-accent-color) 20%, var(--rose-accent-color));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -257,10 +263,10 @@ footer {
 
         .technologies-used {
             display: flex;
+            flex-direction: row;
             flex-wrap: wrap;
             gap: 0.5rem;
             list-style: none;
-            border-bottom: 1px solid var(--border-color);
 
             li {
                 font-size: 0.85rem;

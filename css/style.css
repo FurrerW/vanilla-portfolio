@@ -135,18 +135,18 @@ main {
     gap: 8rem;
 }
 
+.name {
+    background: linear-gradient(45deg, #1e1b4b, var(--indigo-accent-color), var(--rose-accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-
-    .name {
-        background: linear-gradient(45deg, #1e1b4b, var(--indigo-accent-color), var(--rose-accent-color));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
 
     .hero-description {
         display: flex;
@@ -274,6 +274,21 @@ footer {
         }
     }
 }
+
+/* About Page Styling */
+/*
+.about-intro {
+    #professional-header,
+    #personal-header {
+        font-size: 1.5rem;
+    }
+
+    #hobbies-list {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+    }
+} */
 
 /* Contact Page Styling */
 .contact-page-content {

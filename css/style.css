@@ -36,6 +36,8 @@ body {
     flex-direction: column;
     gap: 4rem;
     margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 a {
@@ -71,24 +73,6 @@ h3 {
     font-size: 1.875rem;
     line-height: calc(2.25 / 1);
     letter-spacing: -0.025em;
-}
-
-h4 {
-    font-size: 1.5rem;
-    line-height: calc(2 / 1.5);
-    letter-spacing: -0.025em;
-}
-
-h5 {
-    font-size: 1.25rem;
-    line-height: calc(1.75 / 1);
-    letter-spacing: 0em;
-}
-
-h6 {
-    font-size: 1.125rem;
-    line-height: calc(1.75 / 1);
-    letter-spacing: 0em;
 }
 
 p {
@@ -184,47 +168,42 @@ footer nav .bottomnav_socials {
 .recent-projects {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
 }
 
-.recent-projects h2 {
-    padding-bottom: 2rem;
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
-.recent-projects .project-cards {
+.project-card {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    min-width: 50%;
-    max-width: 75%;
-    margin: 0 auto;
-    padding-bottom: 4rem;
-}
-
-.recent-projects .project-cards .project-card {
     border: 1px solid var(--card-border-color);
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+}
+
+.project-card:open {
     gap: 0.5rem;
 }
 
-.recent-projects .project-cards .project-card a {
-    font-size: 1.25rem;
+.project-card summary {
+    font-size: 1.125rem;
     font-weight: 600;
-    background: linear-gradient(45deg, var(--rose-accent-color), var(--indigo-accent-color) 60%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
 }
 
-.recent-projects .project-cards .project-card a i {
-    font-size: 1.5rem;
+.project-card a {
+    display: block;
 }
 
-.recent-projects .view-more-projects {
+.project-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.view-more-projects {
     align-items: center;
     background-color: var(--indigo-accent-color);
     border: none;
@@ -240,79 +219,11 @@ footer nav .bottomnav_socials {
     transition: background-color 0.2s ease-in-out;
 }
 
-.recent-projects .view-more-projects:hover {
+.view-more-projects:hover {
     background-color: oklch(0.41 0.23 277);
 }
 
 /* Projects Page Styling */
-.projects-intro {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.projects-intro p {
-    font-size: 1.25rem;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(1fr, minmax(250px, 1fr));
-    gap: 4rem;
-}
-
-.projects-grid .project-container {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(100px, 1fr));
-    gap: 1rem;
-    justify-content: space-between;
-}
-
-.projects-grid .project-container a {
-    font-weight: 600;
-}
-
-.projects-grid .project-container .project-name-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.125rem;
-}
-
-.projects-grid .project-container .project-name-links .project-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    background: linear-gradient(45deg, var(--rose-accent-color), var(--indigo-accent-color) 60%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-}
-
-.projects-grid .project-container .project-name-links a {
-    color: var(--secondary-link-color);
-}
-
-.projects-grid .project-container .project-description-technologies {
-    display: flex;
-    flex-direction: column;
-    gap: 0.125rem;
-}
-
-.projects-grid .project-container .project-description-technologies .technologies-used {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    list-style: none;
-}
-
-.technologies-used li {
-    font-size: 0.85rem;
-    background: var(--highlight-color);
-    padding: 0.125rem;
-    color: oklch(0.14 0 0);
-    font-weight: 600;
-}
 
 /* About Page Styling */
 .about-intro {
@@ -426,7 +337,13 @@ footer nav .bottomnav_socials {
 }
 
 @media screen and (min-width: 768px) {
-    header .topnav .topnav_links {
-        gap: 2rem;
+    .project-cards {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .project-cards {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
     }
 }

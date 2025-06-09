@@ -14,6 +14,7 @@
     --card-border-color: oklch(0.72 0 0);
     --highlight-color: oklch(0.92 0.12 96);
     --secondary-link-color: oklch(0.56 0 0);
+    --card-background-color: oklch(0.97 0 0);
 }
 
 * {
@@ -196,20 +197,20 @@ p {
     display: inline-block;
 }
 
-/* Projects Block */
-.projects {
+/* Recent Projects Block */
+.recent-projects {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.projects__grid {
+.recent-projects__grid {
     display: grid;
-    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
 }
 
-.projects__view-more {
+.recent-projects__view-more {
     align-items: center;
     background-color: var(--indigo-accent-color);
     border: none;
@@ -225,41 +226,43 @@ p {
     transition: background-color 0.2s ease-in-out;
 }
 
-.projects__view-more:hover {
+.recent-projects__view-more:hover {
     background-color: oklch(0.41 0.23 277);
+    color: oklch(0.92 0 0);
 }
 
-/* Project Card Block */
-.project-card {
+/* Recent Project Card Block */
+.recent-project-card {
+    background: var(--card-background-color);
     display: flex;
     flex-direction: column;
     border: 1px solid var(--card-border-color);
     padding: 1rem;
 }
 
-.project-card:open {
+.recent-project-card:open {
     gap: 0.5rem;
 }
 
-.project-card__summary {
+.recent-project-card__summary {
     font-size: 1.125rem;
     font-weight: 600;
 }
 
-.project-card__content {
+.recent-project-card__content {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.project-card__link {
+.recent-project-card__link {
     display: block;
 }
 
 /* Projects Page Block */
 .projects-page {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-columns: 100%;
     gap: 3rem;
 }
 
@@ -270,9 +273,9 @@ p {
 }
 
 .projects-page__title {
-    font-size: 2.25rem;
+    /* font-size: 2.25rem;
     line-height: 1;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.05em; */
 }
 
 .projects-page__description {
@@ -287,17 +290,17 @@ p {
 }
 
 .projects-page__card {
+    background: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--card-border-color);
-    padding: 1.5rem;
     gap: 1rem;
+    padding: 1.5rem;
 }
 
 .projects-page__card-info {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
 }
 
 .projects-page__card-title {
@@ -307,11 +310,12 @@ p {
 
 .projects-page__card-links {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .projects-page__card-link {
     color: var(--secondary-link-color);
+    display: inline-block;
     text-decoration: none;
     font-weight: 500;
 }
@@ -368,6 +372,7 @@ p {
 .about__image {
     max-width: 75%;
     height: auto;
+    border: 1px solid var(--card-border-color);
 }
 
 .about__caption {
@@ -460,6 +465,11 @@ p {
     padding-inline: 0.25rem;
 }
 
+.vl {
+    border-left: 2px solid var(--card-border-color);
+    height: 100%;
+}
+
 /* Media Queries */
 @media screen and (prefers-reduced-motion: no-preference) {
     html {
@@ -476,39 +486,34 @@ p {
         --card-border-color: oklch(0.44 0 0);
         --highlight-color: oklch(0.92 0.12 96);
         --secondary-link-color: oklch(0.72 0 0);
+        --card-background-color: oklch(0.27 0 0);
     }
 }
 
 @media screen and (min-width: 768px) {
-    .projects__grid {
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-    }
-
     .projects-page__grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .projects-page__card {
-        flex-direction: row;
-        gap: 2rem;
+    .recent-projects__grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .projects-page__card-info {
-        flex: 1;
-        min-width: 200px;
-    }
-
-    .projects-page__card-content {
-        flex: 2;
+    .about__image {
+        max-width: 50%;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .projects__grid {
-        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    .projects-page__grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .projects-page__grid {
-        grid-template-columns: repeat(1, 1fr);
+    .recent-projects__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about__image {
+        max-width: 35%;
     }
 }

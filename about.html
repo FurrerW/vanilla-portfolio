@@ -18,66 +18,68 @@
     </head>
     <body>
         <div class="site">
-            <header class="topnav_wrapper">
-                <nav class="topnav">
-                    <a href="/index.html"><img src="/assets/images/logo.svg" class="logo" /></a>
-                    <div class="topnav_links_container">
-                        <ul class="topnav_links">
+            <header class="header">
+                <nav class="header__nav">
+                    <a href="/index.html"><img src="/assets/images/logo.svg" class="header__logo" alt="Walter Furrer Logo" /></a>
+                    <div class="header__links-container">
+                        <ul class="header__nav-links">
                             <li>
-                                <a href="/index.html" class="topnav_link">Home</a>
+                                <a href="/index.html" class="header__nav-link">Home</a>
                             </li>
                             <li>
-                                <a href="/projects.html" class="topnav_link">Projects</a>
+                                <a href="/projects.html" class="header__nav-link">Projects</a>
                             </li>
                             <li>
-                                <a href="/about.html" class="topnav_link">About</a>
+                                <a href="/about.html" class="header__nav-link">About</a>
                             </li>
                             <li>
-                                <a href="/contact.html" class="topnav_link">Contact</a>
+                                <a href="/contact.html" class="header__nav-link">Contact</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
             </header>
-            <main>
-                <section class="about-intro">
-                    <h1>Who is <span class="name">Walter</span>?</h1>
-                    <p>Musician, Gamer, Developer</p>
-                    <img src="assets/images/headshot.jpg" alt="A photo of Walter Furrer" />
-                    <figcaption>That's me!</figcaption>
-                </section>
-                <section class="bio">
-                    <p>
-                        Technology has always been a part of my life, but growing up it was always more of a hobby.I was
-                        so focused on being a musician that I never considered doing anything other but that.
-                    </p>
-                    <p><i>Oh how naive I was.</i></p>
-                    <p>
-                        Life has a funny way of working, however, and while I took the scenic route to get here, here I
-                        am! A Web Developer in the making.
-                    </p>
-                    <p>
-                        Feel free to take a look at my <a href="/projects.html">projects</a> or
-                        <a href="/contact.html">contact</a> me if you'd like to learn more!
-                    </p>
+            <main class="main">
+                <section class="about">
+                    <div class="about__intro">
+                        <h1 class="about__title">Who is <span class="hero__name">Walter</span>?</h1>
+                        <p class="about__subtitle">Musician, Gamer, Developer</p>
+                        <img src="assets/images/headshot.jpg" alt="A photo of Walter Furrer" class="about__image" />
+                        <figcaption class="about__caption">That's me!</figcaption>
+                    </div>
+                    <div class="about__bio">
+                        <p class="about__bio-text">
+                            Technology has always been a part of my life, but growing up it was always more of a hobby.I was
+                            so focused on being a musician that I never considered doing anything other but that.
+                        </p>
+                        <p class="about__bio-text"><i></i>Oh how naive I was.</i></p>
+                        <p class="about__bio-text">
+                            Life has a funny way of working, however, and while I took the scenic route to get here, here I
+                            am! A Web Developer in the making.
+                        </p>
+                        <p class="about__bio-text">
+                            Feel free to take a look at my <a href="/projects.html" class="about__bio-link">projects</a> or
+                            <a href="/contact.html" class="about__bio-link">contact</a> me if you'd like to learn more!
+                        </p>
+                    </div>
                 </section>
             </main>
-            <footer>
-                <nav>
-                    <div class="back_to_top">
-                        <a href="#" class="back_to_top">Back to Top <i class="uil uil-arrow-up"></i></a>
+            <footer class="footer">
+                <nav class="footer__nav">
+                    <div class="footer__back-to-top">
+                        <a href="#" class="footer__back-to-top-link">Back to Top <i class="uil uil-arrow-up"></i></a>
                     </div>
-                    <ul class="bottomnav_socials">
+                    <ul class="footer__socials">
                         <li>
-                            <a href="https://github.com/FurrerW" target="_blank"><i class="uil uil-github"></i></a>
+                            <a href="https://github.com/FurrerW" target="_blank" class="footer__social-link"><i class="uil uil-github"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/furrerw/" target="_blank"
+                            <a href="https://www.linkedin.com/in/furrerw/" target="_blank" class="footer__social-link"
                                 ><i class="uil uil-linkedin"></i
                             ></a>
                         </li>
                         <li>
-                            <a href="https://x.com/furrerw" target="_blank"><i class="uil uil-twitter"></i></a>
+                            <a href="https://x.com/furrerw" target="_blank" class="footer__social-link"><i class="uil uil-twitter"></i></a>
                         </li>
                     </ul>
                 </nav>

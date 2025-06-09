@@ -18,48 +18,48 @@
     </head>
     <body>
         <div class="site">
-            <header class="topnav_wrapper">
-                <nav class="topnav">
-                    <a href="/index.html"><img src="/assets/images/logo.svg" class="logo" /></a>
-                    <div class="topnav_links_container">
-                        <ul class="topnav_links">
+            <header class="header">
+                <nav class="header__nav">
+                    <a href="/index.html"><img src="/assets/images/logo.svg" class="header__logo" alt="Walter Furrer Logo" /></a>
+                    <div class="header__links-container">
+                        <ul class="header__nav-links">
                             <li>
-                                <a href="/index.html" class="topnav_link">Home</a>
+                                <a href="/index.html" class="header__nav-link">Home</a>
                             </li>
                             <li>
-                                <a href="/projects.html" class="topnav_link">Projects</a>
+                                <a href="/projects.html" class="header__nav-link">Projects</a>
                             </li>
                             <li>
-                                <a href="/about.html" class="topnav_link">About</a>
+                                <a href="/about.html" class="header__nav-link">About</a>
                             </li>
                             <li>
-                                <a href="/contact.html" class="topnav_link">Contact</a>
+                                <a href="/contact.html" class="header__nav-link">Contact</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
             </header>
-            <main>
-                <div class="contact-page-content">
-                    <h1>Let's connect</h1>
-                    <p class="contact-intro">
+            <main class="main">
+                <div class="contact">
+                    <h1 class="contact__title">Let's connect</h1>
+                    <p class="contact__intro">
                         Feeling up for quick chat? Use the calendar below to schedule a time and date! If email is more
                         your style, you can reach out to me at
-                        <a href="mailto:walterfurrer@proton.me">walterfurrer@proton.me</a>.
+                        <a href="mailto:walterfurrer@proton.me" class="contact__intro-link">walterfurrer@proton.me</a>.
                     </p>
-                    <ul class="contact-page-socials">
+                    <ul class="contact__socials">
                         <li>
-                            <a href="#" target="_blank"><i class="fi fi-brands-github"></i></a>
+                            <a href="#" target="_blank" class="contact__social-link"><i class="fi fi-brands-github"></i></a>
                         </li>
                         <li>
-                            <a href="#" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
+                            <a href="#" target="_blank" class="contact__social-link"><i class="fi fi-brands-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="#" target="_blank"><i class="fi fi-brands-twitter-alt"></i></a>
+                            <a href="#" target="_blank" class="contact__social-link"><i class="fi fi-brands-twitter-alt"></i></a>
                         </li>
                     </ul>
                     <!-- Cal inline embed code begins -->
-                    <div style="width: 100%; height: 100%; overflow: scroll" id="my-cal-inline"></div>
+                    <div class="contact__calendar" id="my-cal-inline"></div>
                     <script type="text/javascript">
                         (function (C, A, L) {
                             let p = function (a, ar) {
@@ -110,22 +110,22 @@
                     <!-- Cal inline embed code ends -->
                 </div>
             </main>
-            <footer>
-                <nav>
-                    <div class="back_to_top">
-                        <a href="#" class="back_to_top">Back to Top <i class="uil uil-arrow-up"></i></a>
+            <footer class="footer">
+                <nav class="footer__nav">
+                    <div class="footer__back-to-top">
+                        <a href="#" class="footer__back-to-top-link">Back to Top <i class="uil uil-arrow-up"></i></a>
                     </div>
-                    <ul class="bottomnav_socials">
+                    <ul class="footer__socials">
                         <li>
-                            <a href="https://github.com/FurrerW" target="_blank"><i class="uil uil-github"></i></a>
+                            <a href="https://github.com/FurrerW" target="_blank" class="footer__social-link"><i class="uil uil-github"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/furrerw/" target="_blank"
+                            <a href="https://www.linkedin.com/in/furrerw/" target="_blank" class="footer__social-link"
                                 ><i class="uil uil-linkedin"></i
                             ></a>
                         </li>
                         <li>
-                            <a href="https://x.com/furrerw" target="_blank"><i class="uil uil-twitter"></i></a>
+                            <a href="https://x.com/furrerw" target="_blank" class="footer__social-link"><i class="uil uil-twitter"></i></a>
                         </li>
                     </ul>
                 </nav>

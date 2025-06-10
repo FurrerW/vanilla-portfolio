@@ -80,7 +80,7 @@ p {
     gap: 4rem;
     margin: 0 auto;
     margin: auto;
-    max-width: 1200px;
+    max-width: 1024px;
     min-height: 100dvh;
     padding-inline: 1rem;
 }

@@ -76,7 +76,7 @@ p {
     gap: 4rem;
     margin: 0 auto;
     min-width: 375px;
-    max-width: 1024px;
+    max-width: 1200px;
     min-height: 100dvh;
     padding-inline: 1rem;
 }
@@ -472,6 +472,16 @@ p {
     gap: 1rem;
 }
 
+.project-detail__image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-detail__image {
+    border: 1px solid var(--card-border-color);
+}
+
 /* Utility Classes */
 .tag-highlight {
     background: var(--highlight-color);
@@ -506,7 +516,8 @@ p {
 
 .external-link:hover {
     text-decoration: underline;
-    underline: 4px solid var(--rose-accent-color);
+    text-decoration-color: var(--rose-accent-color);
+    text-decoration-thickness: 1rem;
     text-underline-offset: 0.5rem;
 }
 
@@ -559,7 +570,39 @@ p {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .about {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        background: var(--card-background-color);
+        padding: 2rem 1.5;
+        border: 1px solid var(--card-border-color);
+    }
+
+    .about__intro {
+        flex: 33%;
+    }
+
+    .about__bio {
+        flex: 66%;
+        background: none;
+    }
+
     .about__image {
-        max-width: 35%;
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+        border: none;
+    }
+
+    .project-detail__image-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .project-detail__image {
+        flex: 45%;
     }
 }

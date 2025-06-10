@@ -33,10 +33,10 @@
                                 <a href="/projects.html" class="header__nav-link">Projects</a>
                             </li>
                             <li>
-                                <a href="/about.html" class="header__nav-link">About</a>
+                                <a href="#about" class="header__nav-link">About</a>
                             </li>
                             <li>
-                                <a href="/contact.html" class="header__nav-link">Contact</a>
+                                <a href="#contact" class="header__nav-link">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -49,6 +49,35 @@
                         <p class="hero__subtitle">Customer Support Pro turned Web Developer.</p>
                     </div>
                     <div class="hero__description"></div>
+                </section>
+                <section class="about" id="about">
+                    <div class="about__intro">
+                        <img src="assets/images/headshot.jpg" alt="A photo of Walter Furrer" class="about__image" />
+                    </div>
+                    <div class="about__bio">
+                        <p>
+                            <b class="text-accent">With 10+ years of experience in Customer Support,</b> I've learned a
+                            thing or two about working with people. No matter what I do, my goal is to provide the best
+                            service possible
+                        </p>
+                        <p>
+                            I've worn a lot of
+                            <b class="text-accent">different hats in various industries over the years</b> (Retail,
+                            Automotive, Logistics, SaSS, etc.) and I've taken bits and pieces of those experiences to
+                            shape my work ethic and ideals.
+                        </p>
+                        <p>
+                            Unfortunately, I have found myself a bit stuck with where I am at and have decided to turn
+                            my <b class="text-accent">hobby and passion for technology into a career change.</b> I have
+                            recently been learning Web Development and am loving it.
+                        </p>
+                        <p>
+                            Please take a look at my
+                            <a href="#recent-projects"><b class="text-link-accent">recent projects</b></a> to see what
+                            I'm working on or view my
+                            <a href="#contact"><b class="text-link-accent">contact</b></a> info for where to find me!
+                        </p>
+                    </div>
                 </section>
                 <section class="recent-projects" id="recent-projects">
                     <h2 class="recent-projects__title">Recent Projects</h2>
@@ -68,6 +97,82 @@
                         </details>
                     </div>
                     <a href="/projects.html" class="recent-projects__view-more">View More Projects</a>
+                </section>
+
+                <section class="contact" id="contact">
+                    <h1 class="contact__title">Let's connect</h1>
+                    <p class="contact__intro">
+                        Feeling up for quick chat? Use the calendar below to schedule a time and date! If email is more
+                        your style, you can reach out to me at
+                        <a href="mailto:walterfurrer@proton.me" class="contact__intro-link">walterfurrer@proton.me</a>.
+                    </p>
+                    <ul class="contact__socials">
+                        <li>
+                            <a href="#" target="_blank" class="contact__social-link"
+                                ><i class="fi fi-brands-github"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact__social-link"
+                                ><i class="fi fi-brands-linkedin"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="contact__social-link"
+                                ><i class="fi fi-brands-twitter-alt"></i
+                            ></a>
+                        </li>
+                    </ul>
+                    <!-- Cal inline embed code begins -->
+                    <div class="contact__calendar" id="my-cal-inline"></div>
+                    <script type="text/javascript">
+                        (function (C, A, L) {
+                            let p = function (a, ar) {
+                                a.q.push(ar);
+                            };
+                            let d = C.document;
+                            C.Cal =
+                                C.Cal ||
+                                function () {
+                                    let cal = C.Cal;
+                                    let ar = arguments;
+                                    if (!cal.loaded) {
+                                        cal.ns = {};
+                                        cal.q = cal.q || [];
+                                        d.head.appendChild(d.createElement("script")).src = A;
+                                        cal.loaded = true;
+                                    }
+                                    if (ar[0] === L) {
+                                        const api = function () {
+                                            p(api, arguments);
+                                        };
+                                        const namespace = ar[1];
+                                        api.q = api.q || [];
+                                        if (typeof namespace === "string") {
+                                            cal.ns[namespace] = cal.ns[namespace] || api;
+                                            p(cal.ns[namespace], ar);
+                                            p(cal, ["initNamespace", namespace]);
+                                        } else p(cal, ar);
+                                        return;
+                                    }
+                                    p(cal, ar);
+                                };
+                        })(window, "https://app.cal.com/embed/embed.js", "init");
+                        Cal("init", "coffee-chat", { origin: "https://cal.com" });
+
+                        Cal.ns["coffee-chat"]("inline", {
+                            elementOrSelector: "#my-cal-inline",
+                            config: { layout: "month_view" },
+                            calLink: "walterfurrer/coffee-chat",
+                        });
+
+                        Cal.ns["coffee-chat"]("ui", {
+                            cssVarsPerTheme: { light: { "cal-brand": "#1e1b4b" }, dark: { "cal-brand": "#818cf8" } },
+                            hideEventTypeDetails: false,
+                            layout: "month_view",
+                        });
+                    </script>
+                    <!-- Cal inline embed code ends -->
                 </section>
             </main>
             <footer class="footer">

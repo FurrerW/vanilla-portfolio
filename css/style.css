@@ -506,7 +506,7 @@ p {
 
 .external-link:hover {
     text-decoration: underline;
-    underline: 4px solid var(--rose-accent-color);
+    underline: 2px solid var(--rose-accent-color);
     text-underline-offset: 0.5rem;
 }
 

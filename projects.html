@@ -61,11 +61,17 @@
                                 </div>
                             </div>
                             <div class="projects-page__card-content">
-                                <img
-                                    src="assets/images/homepage.png"
-                                    alt="Screenshot of the Vanilla Portfolio project homepage"
-                                    class="projects-page__card-image"
-                                />
+                                <picture>
+                                    <source
+                                        media="(prefers-color-scheme: dark)"
+                                        srcset="assets/images/homepage-dark.png"
+                                    />
+                                    <img
+                                        src="assets/images/homepage-light.png"
+                                        alt="Screenshot of the Vanilla Portfolio project homepage"
+                                        class="projects-page__card-image"
+                                    />
+                                </picture>
                                 <p class="projects-page__card-description">
                                     This is a simple portfolio site I built using only HTML, CSS, and JavaScript. What
                                     started off as a place to house simple JavaScript projects turned into a much more

@@ -453,6 +453,7 @@ p {
     background: var(--highlight-color);
     color: oklch(0.14 0 0);
     font-weight: 600;
+    padding-inline: 0.25rem;
 }
 
 .text-highlight {

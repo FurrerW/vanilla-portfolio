@@ -477,6 +477,12 @@ p {
     font-weight: 600;
 }
 
+.internal-link:hover {
+    text-decoration: underline;
+    underline: 1px solid var(--indigo-accent-color);
+    text-underline-offset: 0.5rem;
+}
+
 .external-link {
     color: var(--rose-accent-color);
     font-weight: 600;

@@ -30,10 +30,10 @@
                     <div class="header__nav-links-container">
                         <ul class="header__nav-links">
                             <li>
-                                <a href="/index.html" class="header__nav-link">Home</a>
+                                <a href="#" class="header__nav-link">Home</a>
                             </li>
                             <li>
-                                <a href="/projects.html" class="header__nav-link">Projects</a>
+                                <a href="#projects" class="header__nav-link">Projects</a>
                             </li>
                             <li>
                                 <a href="#about" class="header__nav-link">About</a>
@@ -73,28 +73,64 @@
                         </p>
                         <p>
                             Please take a look at my
-                            <a href="#recent-projects"><span class="internal-link">recent projects</span></a> to see
-                            what I'm working on or view my
-                            <a href="#contact"><span class="internal-link">contact info</span></a> for where to find me!
+                            <a href="#projects"><span class="internal-link">projects</span></a> to see what I'm working
+                            on or view my <a href="#contact"><span class="internal-link">contact info</span></a> for
+                            where to find me!
                         </p>
                     </div>
                 </section>
-                <section class="recent-projects" id="recent-projects">
-                    <h2 class="recent-projects__title">Recent Projects</h2>
-                    <div class="recent-projects__grid">
-                        <details class="recent-project-card" name="recent-projects">
-                            <summary class="recent-project-card__summary">"Vanilla" Portfolio</summary>
-                            <div class="recent-project-card__content">
-                                <p class="recent-project-card__description">
-                                    A simple portfolio site created using HTML, CSS, and JavaScript.
-                                </p>
-                                <a href="projects/vanilla-portfolio/vanilla-portfolio.html" class="internal-link"
-                                    >Learn More</a
-                                >
-                            </div>
-                        </details>
+                <section class="projects-page" id="projects">
+                    <div class="projects-page__intro">
+                        <h1 class="projects-page__title">Projects</h1>
+                        <p class="projects-page__description">A growing collection of projects that I am working on.</p>
                     </div>
-                    <a href="/projects.html" class="recent-projects__view-more">View More Projects</a>
+                    <div class="projects-page__grid">
+                        <div class="projects-page__card">
+                            <div class="projects-page__card-info">
+                                <h3 class="projects-page__card-title">"Vanilla" Portfolio</h3>
+                                <div class="projects-page__card-links">
+                                    <a
+                                        href="https://walterfurrervanilla.netlify.app/"
+                                        class="projects-page__card-link"
+                                        target="_blank"
+                                        >Live Site</a
+                                    >
+                                    <div class="vl"></div>
+                                    <a
+                                        href="https://github.com/walterfurrer/vanilla-portfolio"
+                                        class="projects-page__card-link"
+                                        target="_blank"
+                                        >GitHub</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="projects-page__card-content">
+                                <picture>
+                                    <source
+                                        media="(prefers-color-scheme: dark)"
+                                        srcset="assets/images/homepage-dark.png"
+                                    />
+                                    <img
+                                        src="assets/images/homepage-light.png"
+                                        alt="Screenshot of the Vanilla Portfolio project homepage"
+                                        class="projects-page__card-image"
+                                    />
+                                </picture>
+                                <p class="projects-page__card-description">
+                                    This is a simple portfolio site I built using only HTML, CSS, and JavaScript. What
+                                    started off as a place to house simple JavaScript projects turned into a much more
+                                    complete project.
+                                </p>
+                                <div class="projects-page__card-technologies">
+                                    <ul class="projects-page__card-tech-list">
+                                        <li class="tag-highlight">HTML</li>
+                                        <li class="tag-highlight">CSS</li>
+                                        <li class="tag-highlight">JavaScript</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="contact" id="contact">
                     <h1 class="contact__title">Let's Connect</h1>
